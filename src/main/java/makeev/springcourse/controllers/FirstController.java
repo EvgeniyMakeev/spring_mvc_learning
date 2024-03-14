@@ -28,7 +28,7 @@ public class FirstController {
                             @RequestParam(value = "b", required = false) int b,
                             @RequestParam(value = "action", required = false) String action,
                             Model model) {
-        int result = 0;
+        double result = 0;
         char actionChar = ' ';
         switch (action.toLowerCase()) {
             case "multi" -> {
@@ -44,7 +44,7 @@ public class FirstController {
                 actionChar = '-';
             }
             case "div" -> {
-                result = a / b;
+                result = (double) a / b;
                 actionChar = '/';
             }
         }
